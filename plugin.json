@@ -13,7 +13,7 @@
       "perms": []
     },
     "credits": {
-      "helpText": "Gets the URL to see this project's credits",
+      "helpText": "Gets the URL to this project's credits.",
       "perms": []
     },
     "daft": {
@@ -22,7 +22,7 @@
       "perms": []
     },
     "dice": {
-      "helpText": "Rolls dice",
+      "helpText": "Rolls dice.",
       "usageText": "[rolls] [sides]",
       "perms": []
     },
@@ -31,8 +31,42 @@
       "perms": []
     },
     "getchar": {
-      "helpText": "Gets a Unicode character from a character code",
+      "helpText": "Gets a Unicode character from a character code.",
       "usageText": "<charcode...>",
+      "perms": []
+    },
+    "howsitfeel": {
+      "helpText": "Tells you how it feels.",
+      "perms": []
+    },
+    "issues": {
+      "helpText": "Gets the URL to this project's GitHub Issues.",
+      "perms": []
+    },
+    "license": {
+      "helpText": "Gets the URL to this project's LICENSE.",
+      "perms": []
+    },
+    "lmgtfy": {
+      "helpText": "Helps you Google things.",
+      "perms": []
+    },
+    "me": {
+      "helpText": "Send an emote as the bot.",
+      "usageText": "<action>",
+      "perms": [
+        "basic-commands.me",
+        "basic-commands.op",
+        "AKP48.owner",
+        "AKP48.op"
+      ]
+    },
+    "ping": {
+      "helpText": "Pong.",
+      "perms": []
+    },
+    "pullrequests": {
+      "helpText": "Gets the URL to this project's pull requests.",
       "perms": []
     },
     "reconnect": {
@@ -73,6 +107,23 @@
         "AKP48.owner",
         "AKP48.op"
       ]
+    },
+    "source": {
+      "helpText": "Gets the URL to this project's source code on GitHub.",
+      "perms": []
+    },
+    "trello": {
+      "helpText": "Gets the URL to this project's Trello page.",
+      "perms": []
+    },
+    "uptime": {
+      "helpText": "Tells you how long the bot has been running.",
+      "usageText": "[timezone]",
+      "perms": []
+    },
+    "version": {
+      "helpText": "Tells you what version the bot is running on.",
+      "perms": []
     }
   }
 }
