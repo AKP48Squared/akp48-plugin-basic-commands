@@ -35,6 +35,11 @@
       "usageText": "<charcode...>",
       "perms": []
     },
+    "getchar": {
+      "helpText": "Gets the instance ID of the current ServerConnector instance.",
+      "usageText": "",
+      "perms": []
+    },
     "howsitfeel": {
       "helpText": "Tells you how it feels.",
       "perms": []
