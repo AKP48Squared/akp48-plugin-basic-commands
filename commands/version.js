@@ -7,8 +7,8 @@ Version.prototype.respond = function () {
 };
 
 Version.prototype.buildVersion = function () {
-  var version = GLOBAL.AKP48.package.version;
-  var GitPlugin = GLOBAL.AKP48.getPluginInstance('BackgroundTask', 'github-listener');
+  var version = global.AKP48.package.version;
+  var GitPlugin = global.AKP48.getPluginInstance('BackgroundTask', 'github-listener');
   var str = '';
 
   if(GitPlugin._isRepo) {

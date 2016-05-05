@@ -5,7 +5,7 @@ function Uptime() {
 }
 
 Uptime.prototype.respond = function (context) {
-  var startTime = GLOBAL.AKP48._startTime;
+  var startTime = global.AKP48._startTime;
   var formattedTime = moment.tz(startTime, 'UTC');
 
   if(moment.tz.zone(context.text)) {

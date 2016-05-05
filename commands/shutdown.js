@@ -3,7 +3,7 @@ function Shutdown() {
 }
 
 Shutdown.prototype.respond = function (context) {
-  GLOBAL.AKP48.shutdown(context.text);
+  global.AKP48.shutdown(context.text);
   return '';
 };
 

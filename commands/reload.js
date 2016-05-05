@@ -3,7 +3,7 @@ function Reload() {
 }
 
 Reload.prototype.respond = function () {
-  GLOBAL.AKP48.reload();
+  global.AKP48.reload();
   return '';
 };
 

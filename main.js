@@ -17,7 +17,7 @@ class BasicCommands extends MessageHandlerPlugin {
 }
 
 BasicCommands.prototype.handleCommand = function (message, context, resolve) {
-  GLOBAL.logger.silly(`${this._pluginName}: Received command.`);
+  global.logger.silly(`${this._pluginName}: Received command.`);
 
   // prepare text.
   context.originalText = context.text;
@@ -32,11 +32,11 @@ BasicCommands.prototype.handleCommand = function (message, context, resolve) {
   for (var cmd in this.commands) {
     if (this.commands.hasOwnProperty(cmd)) {
       //check to see if it's the command we're wanting
-      GLOBAL.logger.stupid(`${this._pluginName}: Checking ${cmd} command for ${command}.`);
+      global.logger.stupid(`${this._pluginName}: Checking ${cmd} command for ${command}.`);
 
       //if this command is the one we're trying to run
       if(this.commands[cmd].names.includes(command.toLowerCase())) {
-        GLOBAL.logger.stupid(`${this._pluginName}: Found command for ${command}.`);
+        global.logger.stupid(`${this._pluginName}: Found command for ${command}.`);
 
         //set name to first alias of command, for permissions check purposes.
         var name = this.commands[cmd].names[0];
@@ -46,7 +46,7 @@ BasicCommands.prototype.handleCommand = function (message, context, resolve) {
           this._data.commands[name].perms && this._data.commands[name].perms.length) {
           //and we don't have any at all, simply log and do nothing else
           if(!context.permissions) {
-            GLOBAL.logger.debug(`${this._pluginName}: Command ${command} requires permissions and none were found.`);
+            global.logger.debug(`${this._pluginName}: Command ${command} requires permissions and none were found.`);
             continue;
           }
           //but if we have some permissions, loop through command perms and see if we have any of them.
@@ -60,7 +60,7 @@ BasicCommands.prototype.handleCommand = function (message, context, resolve) {
 
           // If we don't have any of the permissions, log and leave
           if(block) {
-            GLOBAL.logger.debug(`${this._pluginName}: Command ${command} requires permissions and none were found.`);
+            global.logger.debug(`${this._pluginName}: Command ${command} requires permissions and none were found.`);
             continue;
           }
         }
