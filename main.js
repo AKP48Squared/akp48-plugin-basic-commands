@@ -1,8 +1,6 @@
 'use strict';
-const path = require('path');
-const MessageHandlerPlugin = require(path.resolve(require('app-root-path').path, `lib/MessageHandlerPlugin`));
 
-class BasicCommands extends MessageHandlerPlugin {
+class BasicCommands extends global.AKP48.pluginTypes.MessageHandler {
   constructor(AKP48) {
     super('BasicCommands', AKP48);
     this._data = require('./plugin.json');
