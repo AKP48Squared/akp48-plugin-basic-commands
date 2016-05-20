@@ -74,3 +74,4 @@ BasicCommands.prototype.handleCommand = function (message, context, resolve) {
 
 module.exports = BasicCommands;
 module.exports.type = 'MessageHandler';
+module.exports.pluginName = 'basic-commands';
