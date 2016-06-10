@@ -11,7 +11,7 @@ class BasicCommands extends global.AKP48.pluginTypes.MessageHandler {
     this._data = require('./plugin.json');
     var self = this;
     require('./commands').then(function(res){
-      self.logicEngine = new LogicEngine(res, self._data);
+      self.logicEngine = new LogicEngine(res, self._data, self.name);
     }, function(err){
       console.error(err);
     });
@@ -28,9 +28,10 @@ BasicCommands.prototype.handleCommand = function (context) {
   this.logicEngine(context);
 };
 
-function LogicEngine (cmds, data) {
+function LogicEngine (cmds, data, name) {
   this.cmds = cmds;
   this.data = data;
+  this.name = name;
   return (c) => {
     var command = c.command();
 
