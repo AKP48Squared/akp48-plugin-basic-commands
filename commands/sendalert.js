@@ -3,7 +3,7 @@ function SendAlert() {
 }
 
 SendAlert.prototype.respond = function (context) {
-  return context.cloneWith({isAlert: true, text: context.argsText()});
+  return context.cloneWith({isAlert: true, text: context.argText()});
 };
 
 module.exports = SendAlert;

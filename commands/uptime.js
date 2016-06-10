@@ -8,8 +8,8 @@ Uptime.prototype.respond = function (context) {
   var startTime = global.AKP48._startTime;
   var formattedTime = moment.tz(startTime, 'UTC');
 
-  if(moment.tz.zone(context.argsText())) {
-    formattedTime = moment(startTime).tz(context.argsText());
+  if(moment.tz.zone(context.argText())) {
+    formattedTime = moment(startTime).tz(context.argText());
   }
 
   formattedTime = formattedTime.format('[on] YYYY/MM/DD [at] HH:mm:ss z');
