@@ -3,8 +3,8 @@ function Me() {
 }
 
 Me.prototype.respond = function (context) {
-  context.isEmote = true;
-  return context.text || null;
+  context.setCustomData('isEmote', true);
+  return context.argText() || null;
 };
 
 module.exports = Me;

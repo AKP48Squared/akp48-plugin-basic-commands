@@ -11,7 +11,7 @@ Version.prototype.buildVersion = function () {
   var GitPlugin = global.AKP48.getPluginInstance('BackgroundTask', 'github-listener');
   var str = '';
 
-  if(GitPlugin._isRepo) {
+  if(GitPlugin && GitPlugin._isRepo) {
     var commit = GitPlugin.getCommit().substring(0,7);
     var branch = GitPlugin.getBranch() || GitPlugin.getTag();
 

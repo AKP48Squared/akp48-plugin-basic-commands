@@ -4,7 +4,7 @@ function Ping() {
 
 Ping.prototype.respond = function (context) {
   var str = '';
-  if(context.text.length) {
+  if(context.argText().length) {
     str = Date.now();
   }
   return `Pong. ${str}`;

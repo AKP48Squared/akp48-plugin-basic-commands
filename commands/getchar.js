@@ -3,7 +3,7 @@ function GetChar() {
 }
 
 GetChar.prototype.respond = function (context) {
-  var args = context.text.split(' ');
+  var args = context.rawArgs();
   if(!args.length) {return null;}
 
   var out = '';
