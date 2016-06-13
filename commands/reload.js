@@ -4,7 +4,7 @@ function Reload() {
 
 Reload.prototype.respond = function (c) {
   global.AKP48.reload();
-  c.reply(c.cloneWith({isAlert: true, text: 'Reloading...'}));
+  return c.cloneWith({isAlert: true, text: 'Reloading...'});
 };
 
 module.exports = Reload;
