@@ -7,16 +7,16 @@ Plugins.prototype.respond = function (context) {
   var outputString = `Plugins: `;
   for (var k in pluginsObj) {
     if (pluginsObj.hasOwnProperty(k)) {
-      outputString += `${pluginsObj[k].name} `;
+      outputString += `${pluginsObj[k].name}`;
       if (pluginsObj[k].error) {
-        outputString += `[*] | `;
+        outputString += `* | `;
       } else {
-        outputString += `| `;
+        outputString += ` | `;
       }
     }
   }
 
-  return outputString.substr(0, outputString.length-2);
+  return outputString.substr(0, outputString.length-3);
 };
 
 module.exports = Plugins;
