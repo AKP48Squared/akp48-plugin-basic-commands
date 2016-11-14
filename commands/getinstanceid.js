@@ -3,7 +3,7 @@ function GetInstanceID() {
 }
 
 GetInstanceID.prototype.respond = function (ctx) {
-  return ctx.instanceId;
+  return ctx.instanceId();
 };
 
 module.exports = GetInstanceID;
