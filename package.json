@@ -1,6 +1,6 @@
 {
   "name": "akp48-plugin-basic-commands",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Basic Commands plugin for AKP48. Adds a few simple commands to the bot.",
   "main": "main.js",
   "scripts": {
