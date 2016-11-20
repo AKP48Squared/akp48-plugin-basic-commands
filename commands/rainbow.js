@@ -4,7 +4,7 @@ function Rainbow() {
 
 Rainbow.prototype.respond = function (ctx) {
   ctx.setCustomData('noPrefix', true);
-  return ctx.instance().TextDecorator.rainbow(ctx.argText());
+  return [{style: "rainbow", text: ctx.argText()}];
 };
 
 module.exports = Rainbow;
