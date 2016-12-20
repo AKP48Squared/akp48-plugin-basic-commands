@@ -34,7 +34,9 @@ Stats.prototype.uptime = function (startTime) {
   var diff = Date.now() - startTime;
   var d = new Date(diff);
 
-  return `${this.pad(d.getUTCHours(), 2)}:${this.pad(d.getUTCMinutes(), 2)}:${this.pad(d.getUTCSeconds(), 2)}.${this.pad(d.getUTCMilliseconds(), 3)}`;
+  var days = (diff/1000) % 86400;
+
+  return `${days ? days + '+' : ''}${this.pad(d.getUTCHours(), 2)}:${this.pad(d.getUTCMinutes(), 2)}:${this.pad(d.getUTCSeconds(), 2)}.${this.pad(d.getUTCMilliseconds(), 3)}`;
 };
 
 // https://stackoverflow.com/a/10073788/645831
