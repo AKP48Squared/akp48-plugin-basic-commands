@@ -34,7 +34,7 @@ Stats.prototype.uptime = function (startTime) {
   var diff = Date.now() - startTime;
   var d = new Date(diff);
 
-  var days = (diff/1000) % 86400;
+  var days = ((diff/1000) / 86400) >> 0; // Shift by zero to remove fractional parts.
 
   return `${days ? days + '+' : ''}${this.pad(d.getUTCHours(), 2)}:${this.pad(d.getUTCMinutes(), 2)}:${this.pad(d.getUTCSeconds(), 2)}.${this.pad(d.getUTCMilliseconds(), 3)}`;
 };
